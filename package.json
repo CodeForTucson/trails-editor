@@ -1,0 +1,34 @@
+{
+  "name": "trails-editor",
+  "version": "0.0.1-dev",
+  "description": "Open Trails schema v1.0 data editor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CodeForTucson/trails-editor.git"
+  },
+  "author": "Adrian Sonnenschein",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeForTucson/trails-editor/issues"
+  },
+  "homepage": "https://github.com/CodeForTucson/trails-editor",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "1.12.4",
+    "bookshelf": "0.8.1",
+    "cookie-parser": "1.3.5",
+    "express": "4.12.4",
+    "express-session": "1.11.1",
+    "knex": "0.8.6",
+    "lodash": "3.9.3",
+    "nodemon": "1.3.7",
+    "passport": "0.2.2",
+    "passport-local": "1.0.0",
+    "pg": "4.3.0",
+    "supertest": "1.0.1"
+  }
+}
