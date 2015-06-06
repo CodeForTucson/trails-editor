@@ -1,3 +1,13 @@
+CREATE TABLE stewards (
+    stewards_id SERIAL PRIMARY KEY,
+    name VARCHAR,
+    url VARCHAR,
+    phone VARCHAR,
+    address VARCHAR,
+    publisher VARCHAR,
+    license VARCHAR
+);
+
 CREATE TABLE trail_segments (
     trail_segments_id SERIAL PRIMARY KEY,
     stewards_id INTEGER REFERENCES stewards(stewards_id)
@@ -15,7 +25,7 @@ CREATE TABLE trail_segments (
 CREATE TABLE named_trails (
     named_trails_id SERIAL PRIMARY KEY,
     name VARCHAR,
-    trail_segments_ids INTEGER REFERENCES trail_segments(trail_segments_ids)
+    trail_segments_id INTEGER REFERENCES trail_segments(trail_segments_id)
         ON DELETE CASCADE,
     description VARCHAR,
     part_of VARCHAR
@@ -24,7 +34,7 @@ CREATE TABLE named_trails (
 CREATE TABLE trailheads (
     trailheads_id SERIAL PRIMARY KEY,
     name VARCHAR,
-    trail_segments_ids INTEGER REFERENCES trail_segments(trail_segments_ids)
+    trail_segments_id INTEGER REFERENCES trail_segments(trail_segments_id)
         ON DELETE CASCADE,
     stewards_id INTEGER REFERENCES stewards(stewards_id) ON DELETE CASCADE,
     address VARCHAR,
@@ -32,18 +42,8 @@ CREATE TABLE trailheads (
     drinkwater VARCHAR,
     restrooms VARCHAR,
     kiosk VARCHAR,
-    osm_tags VARCHAR
+    osm_tags VARCHAR,
     geometry JSON
-);
-
-CREATE TABLE stewards (
-    stewards_id SERIAL PRIMARY KEY,
-    name VARCHAR,
-    url VARCHAR,
-    phone VARCHAR,
-    address VARCHAR,
-    publisher VARCHAR,
-    license VARCHAR
 );
 
 CREATE TABLE areas (
@@ -51,7 +51,7 @@ CREATE TABLE areas (
     name VARCHAR,
     stewards_id INTEGER REFERENCES stewards(stewards_id) ON DELETE CASCADE,
     url VARCHAR,
-    osm_tags VARCHAR
+    osm_tags VARCHAR,
     geometry JSON
 );
 
