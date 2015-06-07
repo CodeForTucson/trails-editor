@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Open Trails Editor</title>
+        <link rel="stylesheet" href="vendor/leaflet-0.7.3/leaflet.css" />
+        <link rel="stylesheet" href="vendor/leaflet-draw/leaflet.draw.css" />
+        <link rel="stylesheet" href="vendor/bootstrap-3.3.4-dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="style/base.css" />
+    </head>
+    <body>
+        <div id="map"></div>
+
+        <!-- Modal -->
+        <form id="post-form">
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Enter Attribute Data</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div id="motor_vehicles" class="form-group">
+                        <label for="motor-vehicles-select" class="col-sm-4 control-label">
+                            Motor Vehicles:
+                        </label>
+                        <div class="col-sm-8">
+                            <label class="radio-inline">
+                              <input type="radio" name="motor_vehicles" id="motor-vehicle-yes" value="yes"> Yes
+                            </label>
+                            <label class="radio-inline">
+                              <input type="radio" name="motor_vehicles" id="motor-vehicle-no" value="no"> No
+                            </label>
+                        </div>
+                    </div>
+                    <br/>
+                    <div id="foot" class="form-group">
+                        <label for="foot-select" class="col-sm-4 control-label">
+                            Foot Trail:
+                        </label>
+                        <div class="col-sm-8">
+                            <label class="radio-inline">
+                              <input type="radio" name="foot" id="foot-yes" value="yes"> Yes
+                            </label>
+                            <label class="radio-inline">
+                              <input type="radio" name="foot" id="foot-no" value="no"> No
+                            </label>
+                        </div>
+                    </div>
+                    <br/>
+                    <div id="bicycle" class="form-group">
+                        <label for="bicycle" class="col-sm-4 control-label">
+                            Bicycle Trail:
+                        </label>
+                        <div class="col-sm-8">
+                            <label class="radio-inline">
+                              <input type="radio" name="bicycle" id="bicycle-yes" value="yes"> Yes
+                            </label>
+                            <label class="radio-inline">
+                              <input type="radio" name="bicycle" id="bicycle-no" value="no"> No
+                            </label>
+                        </div>
+                    </div>
+                    <br/>
+                    <div id="horse" class="form-group">
+                        <label for="horse" class="col-sm-4 control-label">
+                            Horses Allowed:
+                        </label>
+                        <div class="col-sm-8">
+                            <label class="radio-inline">
+                              <input type="radio" name="horse" id="horse-yes" value="yes"> Yes
+                            </label>
+                            <label class="radio-inline">
+                              <input type="radio" name="horse" id="horse-no" value="no"> No
+                            </label>
+                        </div>
+                    </div>
+                    <br/>
+                    <div id="ski" class="form-group">
+                        <label for="ski" class="col-sm-4 control-label">
+                            Ski Trail:
+                        </label>
+                        <div class="col-sm-8">
+                            <label class="radio-inline">
+                              <input type="radio" name="ski" id="ski-yes" value="yes"> Yes
+                            </label>
+                            <label class="radio-inline">
+                              <input type="radio" name="ski" id="ski-no" value="no"> No
+                            </label>
+                        </div>
+                    </div>
+                    <br/>
+                    <div id="wheelchair" class="form-group">
+                        <label for="wheelchair" class="col-sm-4 control-label">
+                            Wheelchair Accessible:
+                        </label>
+                        <div class="col-sm-8">
+                            <label class="radio-inline">
+                              <input type="radio" name="wheelchair" id="wheelchair-yes" value="yes"> Yes
+                            </label>
+                            <label class="radio-inline">
+                              <input type="radio" name="wheelchair" id="wheelchair-no" value="no"> No
+                            </label>
+                        </div>
+                    </div>
+                    <input id="geometry" name="geometry" type="hidden">
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button id="form-submit" type="submit" class="btn btn-primary">Sumit</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </form>
+
+        <script src="vendor/jquery-1.11.3.min.js"></script>
+        <script src="vendor/bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
+        <script src="vendor/leaflet-0.7.3/leaflet.js"></script>
+        <script src="vendor/leaflet-draw/leaflet.draw.js"></script>
+        <script src="script/app.js"></script>
+    </body>
+</html>
